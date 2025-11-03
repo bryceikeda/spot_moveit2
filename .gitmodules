@@ -1,0 +1,3 @@
+[submodule "spot_ros"]
+	path = spot_ros2
+	url = git@github.com:bdaiinstitute/spot_ros2.git
