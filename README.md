@@ -11,12 +11,6 @@ Set up your ROS 2 workspace, and clone the repository in the `src` directory:
 mkdir -p <ROS workspace>/src && cd <ROS workspace>/src
 https://github.com/bryceikeda/spot_moveit2.git
 ```
-Then, initialize and install the submodules.
-```bash
-cd spot_ros2
-git submodule init
-git submodule update
-```
 
 Next, run the following script to install the necessary Boston Dynamics packages (both Python and C++) and ROS dependencies.
 The install script takes the optional argument ```--arm64```; it otherwise defaults to an AMD64 install.
@@ -24,12 +18,8 @@ The install script takes the optional argument ```--arm64```; it otherwise defau
 ./install_spot_ros2.sh
 or
 ./install_spot_ros2.sh --arm64
-```
-From here, build and source your ROS 2 workspace.
-```bash
-cd <ROS workspace>
-colcon build --symlink-install
 source install/setup.bash
+```
 
 ## Packages
 * [`spot_simple_controllers`](spot_simple_controllers): Core wrapper for interfacing between MoveIt 2 and the [spot_ros2](https://github.com/bdaiinstitute/spot_ros2) package. 
